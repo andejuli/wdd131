@@ -72,4 +72,7 @@ h2 {
         display: grid;
         grid-template-columns: 3fr 1fr;
     }
+    article {
+        padding-left: 75px;
+    }
 }
