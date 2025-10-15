@@ -31,12 +31,11 @@ nav li {
     padding-right: 25px;
 }
 article {
-    padding-left: 75px;
+    padding: 0 25px;
 }
 article img {
     display:block;
     margin: 0 auto;
-    
 }
 
 h1 {
