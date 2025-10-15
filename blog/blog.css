@@ -31,7 +31,7 @@ nav li {
     padding-right: 25px;
 }
 article {
-    padding-left: 180px;
+    padding-left: 75px;
 }
 article img {
     display:block;
@@ -73,6 +73,6 @@ h2 {
         grid-template-columns: 3fr 1fr;
     }
     article {
-        padding-left: 75px;
+        padding-left: 180px;
     }
 }
