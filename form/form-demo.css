@@ -1,5 +1,14 @@
 /* form-demo.css */
-
+body {
+  font-size: 1.2em;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
 label {
     display: block;
     margin-bottom: 8px;
@@ -23,7 +32,10 @@ label {
     border-radius: 4px;
     cursor: pointer;
   }
-
+  .errors {
+    white-space: pre-line; /*needed for 2 errors to be on separate lines*/
+    color: red;
+  }
   .hide {
     display: none;
   }

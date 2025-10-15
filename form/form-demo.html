@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Form</title>
     <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" href="form-demo.css" />
+    <link rel="stylesheet" href="form-demo.css"/>
     <script src="form-demo.js" defer></script>
   </head>
   <body>
@@ -18,20 +18,18 @@
         <input type="text" id="fullName" name="fullName" required>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="email@email.com" required>
-
         <label for="address">Address:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-
         <label for="paymentMethod">Payment Method:</label>
-        <select id="paymentMethod" name="paymentMethod" required>
+        <select id="paymentMethod" name="paymentMethod" required aria-expanded="false" aria-controls="creditCardnumberContainer paypalUsernameContainer">
             <option value="">Select Payment Method</option>
             <option value="creditCard">Credit Card</option>
             <option value="paypal">PayPal</option>
         </select>
 
         <!-- Container for credit card details -->
-        <p id="creditCardNumberContainer" class="hide">
-            <label for="creditCardNumber">Credit Card Number:</label>
+        <p id="creditCardNumberContainer" class="hide" role="region" aria-labelledby="creditCardLabel">
+            <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
             <input
             type="text"
             id="creditCardNumber"
@@ -40,11 +38,24 @@
             placeholder="Enter 16 digits"
             required
             />
+            <label for="expirationDate">Expiration</label>
+            <input 
+            type='text' 
+            id='month' 
+            name="expMonth" 
+            placeholder="MM" 
+            aria-labelledby="expirationDate">
+            <input 
+            type='text' 
+            id='year' 
+            name="expYear" 
+            placeholder="YY" 
+            aria-labelledby="expirationDate">
         </p>
-
+      
         <!-- Container for PayPal details -->
-        <p id="paypalUsernameContainer" class="hide">
-            <label for="paypalUsername">PayPal Username:</label>
+        <p id="paypalUsernameContainer" class="hide" role="region" aria-labelledby="paypalLabel">
+            <label id="paypalLabel" for="paypalUsername">PayPal Username:</label>
             <input
             type="text"
             id="paypalUsername"

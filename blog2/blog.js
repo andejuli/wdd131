@@ -44,7 +44,6 @@ let container = document.querySelector('#blog-articles');
 articles.forEach(function(item){
 	let book = document.createElement('article');
 	book.setAttribute('class', 'book');
-	console.log(articles[0].date);
 
 	let html = `
 		<div class="details">
